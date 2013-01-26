@@ -1,34 +1,9 @@
 @import 'boilerplate';
+@import 'menu';
 
-/* Mixin transition*/
-.transition (@prop: all, @time: 1s, @ease: linear) {
-    -webkit-transition: @prop @time @ease;
-    -moz-transition: @prop @time @ease;
-    -o-transition: @prop @time @ease;
-    -ms-transition: @prop @time @ease;
-    transition: @prop @time @ease;
-}
 
-/* Mixin transformation*/
-.transform (@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
-    -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    -o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    -ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-}
 
-/* Mixin Reflection*/
-.reflect (@length: 50%, @opacity: 0.2){
-    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(@length, transparent), to(rgba(255,255,255,@opacity)));
-}
 
-/* Mixin color scheme for the app*/
-@base: #663333;
-@lighter1: lighten(spin(@base, 5), 10%);
-@lighter2: lighten(spin(@base, 10), 20%);
-@darker1: darken(spin(@base, -5), 10%);
-@darker2: darken(spin(@base, -10), 20%);
 
 
  
