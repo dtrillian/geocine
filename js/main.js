@@ -15,6 +15,19 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 
+ function click_close() {
+        var input = document.getElementById("openPanel");
+        if (input.fireEvent) { // IE way
+            var e = document.createEventObject();
+            input.fireEvent('onclick', e);
+        }
+        else { // DOM way
+            var e = document.createEvent('MouseEvents');
+            e.initEvent('click', true, true);
+            input.dispatchEvent(e);
+        }
+    }
+
 $(function(){
     $(document).on('click', '#mapClick', function(){
         $('#theaters').hide();
@@ -22,7 +35,7 @@ $(function(){
         $('#about').hide();
         $('#map').show();
         $('#openPanel').click();
-
+        click_close();
     });
 
     $('#theatersClick').on('click', function(){
@@ -31,6 +44,9 @@ $(function(){
         $('#about').hide();
         $("#map").hide();
         $('#openPanel').click();
+        click_close();
+        
+
     });
 
     $('#moviesClick').on('click', function(){
@@ -39,6 +55,8 @@ $(function(){
         $('#about').hide();
         $("#map").hide();
         $('#openPanel').click();
+        click_close();
+        
     });
 
     $('#aboutClick').on('click', function(){
@@ -47,6 +65,8 @@ $(function(){
         $('#about').show();
         $("#map").hide();
         $('#openPanel').click();
+        click_close();
+        
     });
 /*
     if(navigator.geolocation){
@@ -70,10 +90,8 @@ $(function(){
 */
     getFilms();
 
-
-    
-
 });
+
     function getSalles_list(latitude,longitude) {
         var urlWsAllocine="http://api.allocine.fr/rest/v3/theaterlist?partner=YW5kcm9pZC12M3M&count=25&page=1&lat="+latitude+"&long="+longitude+"&format=json";
         var script = document.createElement('script');
