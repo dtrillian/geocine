@@ -108,6 +108,18 @@
 
 
 
-function toggleMenu() {
-    document.body.classList.toggle("menuOpen");
-}
+document.addEventListener("DOMContentLoaded", function(){
+
+    document.querySelector("body > section > header > a").addEventListener("click", function(){
+        var region = document.querySelector("body > section");
+
+        if ( region.getAttribute("data-state") == "drawer" ) {
+          region.setAttribute("data-state", "none");
+
+        } else {
+          region.setAttribute("data-state", "drawer");
+        }
+
+    });
+
+});

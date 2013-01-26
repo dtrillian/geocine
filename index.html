@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/building-blocks/widgets/toolbars.css">
 	<link rel="stylesheet" type="text/css" href="css/building-blocks/widgets/drawer/style.css">
 	<link rel="stylesheet" type="text/css" href="css/building-blocks/fonts.css">
-	<!-- <link rel='stylesheet' href='css/main.css'/> -->
+	<link rel='stylesheet' href='css/main.css'/>
 
 	<script src='js/jquery.js'></script>
 	<!--<script src='js/bootstrap.js'></script>
@@ -59,24 +59,7 @@
 
     </style>
 
-	<script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function(){
-
-        document.querySelector("body > section > header > a").addEventListener("click", function(){
-          var region = document.querySelector("body > section");
-
-          if ( region.getAttribute("data-state") == "drawer" ) {
-              region.setAttribute("data-state", "none");
-
-          } else {
-              region.setAttribute("data-state", "drawer");
-          }
-
-        });
-
-      });
-    </script>
-    <title>Drawer</title>
+    <title>GéoCiné</title>
     <meta name="description" content="Without description">
     <meta name="requires" content="None, optional other/toolbars/style.css">
     <meta name="target" content="div[role='main']">
@@ -88,21 +71,14 @@
         <menu type="toolbar">
          <a href="#"><span class="icon icon-add">add</span></a>
       </menu>
-        <h1>Title <em>(9)</em></h1>
+        <h1>Menu <em>(9)</em></h1>
       </header>
       <div class="inner">
         <ul>
-          <li><a href="#">label</a></li>
-          <li><a href="#">label</a></li>
-          <li><a href="#">label</a></li>
-          <li><a href="#">label</a></li>
-        </ul>
-        <h2>Subtitle</h2>
-        <ul>
-          <li><a href="#">label</a></li>
-          <li><a href="#">label</a></li>
-          <li><a href="#">label larger label than the </a></li>
-          <li><a href="#">label</a></li>
+          <li><a href="#">Autour de moi <label>10</label></a></li>
+          <li><a href="#">liste des cinémas </a></li>
+          <li><a href="#">Films à l'affiche</a></li>
+          <li><a href="#">À propos</a></li>
         </ul>
       </div>
       <div role="toolbar">
