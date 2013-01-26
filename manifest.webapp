@@ -12,7 +12,7 @@
   "permission": {
     "contacts": {
       "description": "Accéder à votre position via le téléphone",
-      "access": "read"
+      "access": "read" 
     }
   }
   "default_locale": "fr"
