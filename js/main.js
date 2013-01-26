@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
 });
-
+/*
 document.addEventListener("DOMContentLoaded", function(){
   document.getElementById("bb-docs-toggle").addEventListener("click", function(){
     var target = document.querySelector("ul[data-state]");
@@ -25,3 +25,4 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   })
 });
+*/

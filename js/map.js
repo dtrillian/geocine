@@ -1,10 +1,3 @@
-<!DOCTYPE html> 
-<html>
-<head>
-<meta charset="utf-8">
-<title>GéoCiné - Carte des salles à proximité</title>
-
-<script>
 
 if(navigator.geolocation){
 	navigator.geolocation.getCurrentPosition(function(position){
@@ -59,7 +52,7 @@ function getSallesCallback(data) {
 		var myMarkerLatLng = new CM.LatLng(salle.geoloc.lat,salle.geoloc.long);
 		var myMarker = new CM.Marker(myMarkerLatLng, { title: salle.name , icon:pincinema_icon});
 
-		if(typeof(salle.picture)!=='undefined') {
+		if(salle.picture!==undefined) {
 			myMarker.bindInfoWindow(
 			"<div style='text-align:center'><strong style='font-size:1.1em;'>"+salle.name+"</strong><br />" + 
 			"<img style='width:100%' src='"+salle.picture.href+"'><br />" + 
@@ -79,44 +72,3 @@ function getSallesCallback(data) {
 	}
 }
 
-</script>
-</head>
-<body>
-
-
- <div id="map"></div>
- 
- <style>
- body {
-	margin:0px; 
-	padding:0px;
- }
- #map { 
-	width: 100%; 
-	height: 700px; 
-	//border:grey 1px solid;
-}
-.wml-copyright { 
-	display: none; 
-}
- </style>
-
-	
-	<script type="text/javascript" src="http://tile.cloudmade.com/wml/0.4/web-maps-lite.js"></script>
-	<script type="text/javascript">//<![CDATA[
-		var cloudmade = new CM.Tiles.CloudMade.Web({key: '8ee2a50541944fb9bcedded5165f09d9', styleId: 997});
-		var map = new CM.Map('map', cloudmade);
-		
-		var maposition_icon = new CM.Icon();
-		maposition_icon.image = "img/pin_maposition.gif";
-		maposition_icon.iconSize = new CM.Size(35, 35);
-		maposition_icon.iconAnchor = new CM.Point(18,18);
-		var pincinema_icon = new CM.Icon();
-		pincinema_icon.image = "img/pin_cinema.png";
-		pincinema_icon.iconSize = new CM.Size(40, 40);
-		pincinema_icon.iconAnchor = new CM.Point(20,40);
-
-	//]]></script>
-
-</body>
-</html>
