@@ -95,39 +95,39 @@
     <div role="main" id="mainContent">
     	
     	<section data-type="page" id="map">
- <div id="map_div"></div>
- 
- <style>
- #map_div { 
-	width: 100%; 
-	height: 465px; 
-	//border:grey 1px solid;
-	background-color:grey;
-	position: absolute;
-}
-.wml-copyright { 
-	display: none; 
-}
- </style>
+	 <div id="map_div"></div>
+	 
+	 <style>
+	 #map_div { 
+		width: 100%; 
+		height: 465px; 
+		//border:grey 1px solid;
+		background-color:grey;
+		position: absolute;
+	}
+	.wml-copyright { 
+		display: none; 
+	}
+	 </style>
 
 
-<script type="text/javascript" src="http://tile.cloudmade.com/wml/0.4/web-maps-lite.js"></script>
-<script type="text/javascript">//<![CDATA[
-	var cloudmade = new CM.Tiles.CloudMade.Web({key: '8ee2a50541944fb9bcedded5165f09d9', styleId: 997});
-	var map = new CM.Map('map_div', cloudmade);
-	
-	var maposition_icon = new CM.Icon();
-	maposition_icon.image = "img/pin_maposition.gif";
-	maposition_icon.iconSize = new CM.Size(35, 35);
-	maposition_icon.iconAnchor = new CM.Point(18,18);
-	var pincinema_icon = new CM.Icon();
-	pincinema_icon.image = "img/pin_cinema.png";
-	pincinema_icon.iconSize = new CM.Size(40, 40);
-	pincinema_icon.iconAnchor = new CM.Point(20,40);
+	<script type="text/javascript" src="http://tile.cloudmade.com/wml/0.4/web-maps-lite.js"></script>
+	<script type="text/javascript">//<![CDATA[
+		var cloudmade = new CM.Tiles.CloudMade.Web({key: '8ee2a50541944fb9bcedded5165f09d9', styleId: 997});
+		var map = new CM.Map('map_div', cloudmade);
+		
+		var maposition_icon = new CM.Icon();
+		maposition_icon.image = "img/pin_maposition.gif";
+		maposition_icon.iconSize = new CM.Size(35, 35);
+		maposition_icon.iconAnchor = new CM.Point(18,18);
+		var pincinema_icon = new CM.Icon();
+		pincinema_icon.image = "img/pin_cinema.png";
+		pincinema_icon.iconSize = new CM.Size(40, 40);
+		pincinema_icon.iconAnchor = new CM.Point(20,40);
 
-//]]></script>
+	//]]></script>
 
-	
+		
 	
 	</section>
     	<section role="region" id="theaters">
@@ -152,12 +152,7 @@
 		      <p>Merci à la team FirefoxOS :)</p>
 
 		</section>
-
-
-
-    </div>
-  </section>
-
+</div>
   <script src='js/jquery.js'></script>
   <script src='js/main.js'></script>
 <script src='js/map.js'></script>
