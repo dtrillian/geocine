@@ -70,6 +70,10 @@ $(function(){
 */
     getFilms();
 
+
+    
+
+});
     function getSalles_list(latitude,longitude) {
         var urlWsAllocine="http://api.allocine.fr/rest/v3/theaterlist?partner=YW5kcm9pZC12M3M&count=25&page=1&lat="+latitude+"&long="+longitude+"&format=json";
         var script = document.createElement('script');
@@ -83,10 +87,6 @@ $(function(){
         script.src = urlWsAllocine + '&callback=getFilmsCallback';
         document.getElementsByTagName('head')[0].appendChild(script);
     };
-
-    
-
-});
 
 function getSallesListCallback(data) {
         //alert(data.feed.totalResults);
