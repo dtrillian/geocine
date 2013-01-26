@@ -9,11 +9,8 @@
     "name": "Malik et @rthur",
     "url": "http://www.perdu.com"
   },
-  "permission": {
-    "contacts": {
-      "description": "Accéder à votre position via le téléphone",
-      "access": "read" 
-    }
-  }
+  "permissions": {
+    "geolocation": {}
+  },
   "default_locale": "fr"
 }
