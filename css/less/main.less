@@ -1,6 +1,16 @@
 @import 'boilerplate';
 @import 'menu';
 
+#mainContent {
+	position:absolute;
+	top:0;
+
+	.transition(transform, 0.4s, ease-in);
+
+	.menuOpen & {
+		transform: translateX(200px);
+	}
+}
 
 
 
