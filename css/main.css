@@ -332,12 +332,12 @@ ul {
   top: 0;
   width: 200px;
   max-width: 90%;
-  height: 420px;
+  height: 465px;
   background-color: #5a5959;
 }
 #menu h3 {
   font-family: arial;
-  font-size: 12px;
+  font-size: 18px;
   color: #fff;
   margin: 0;
   background-color: #5a5959;
@@ -382,7 +382,7 @@ ul {
   vertical-align: baseline;
 }
 #menu ul li a label {
-  padding: 5px 7px;
+  padding: 0 7px;
   background-color: #aaa;
   display: inline-block;
   float: right;
