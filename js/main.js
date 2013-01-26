@@ -63,13 +63,6 @@ $(function(){
         // Pas de geoloc => on choisit une position par défaut
         var  latitude=48.8151684;
         var longitude=2.3635036;
-        var myMarkerLatLng = new CM.LatLng(latitude,longitude);
-        var myMarker = new CM.Marker(myMarkerLatLng, {
-            title: "Ma position" , icon:maposition_icon
-        });
-
-        map.setCenter(myMarkerLatLng, 13);
-        map.addOverlay(myMarker);
 
         getSalles(latitude,longitude);
 
