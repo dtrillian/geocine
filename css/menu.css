@@ -175,7 +175,7 @@ ul {
 }
 #menu h3 {
   font-family: arial;
-  font-size: 12px;
+  font-size: 18px;
   color: #fff;
   margin: 0;
   background-color: #5a5959;
@@ -220,7 +220,7 @@ ul {
   vertical-align: baseline;
 }
 #menu ul li a label {
-  padding: 5px 7px;
+  padding: 0 7px;
   background-color: #aaa;
   display: inline-block;
   float: right;
