@@ -15,10 +15,6 @@
 	<link rel="stylesheet" type="text/css" href="css/building-blocks/fonts.css">
 	<link rel='stylesheet' href='css/main.css'/>
 
-	<script src='js/jquery.js'></script>
-	<script src='js/main.js'></script>
-	<script src='js/map.js'></script>
-
 	<style>
       html, body {
           margin: 0;
@@ -74,10 +70,10 @@
       </header>
       <div class="inner">
         <ul>
-          <li><a href="#map">Autour de moi <label>10</label></a></li>
-          <li><a href="#theaters">liste des cinémas </a></li>
-          <li><a href="#movies">Films à l'affiche</a></li>
-          <li><a href="#about">À propos</a></li>
+          <li><a href="#map" id="mapClick">Autour de moi <label>10</label></a></li>
+          <li><a href="#theaters" id="theatersClick">liste des cinémas </a></li>
+          <li><a href="#movies" id="moviesClick">Films à l'affiche</a></li>
+          <li><a href="#about" id="aboutClick">À propos</a></li>
         </ul>
       </div>
       <!-- <div role="toolbar">
@@ -92,11 +88,11 @@
 
   <section role="region">
     <header>
-      <a href="#"><span class="icon icon-menu">menu</span></a>
+      <a href="#" id="openPanel"><span class="icon icon-menu">menu</span></a>
       <h1>Géociné</h1>
     </header>
 
-    <div role="main">
+    <div role="main" id="mainContent">
     	
     	<section data-type="page" id="map">
  <div id="map_div"></div>
@@ -134,55 +130,9 @@
 	
 	
 	</section>
-
-	<section data-type="list" id="theaters">
-		  <header>Cinémas proches</header>
+    	<section role="region" id="theaters">
+		  <h2 class="bb-docs">Cinémas proches</h2>
 		  <ul> 
-		    <li>
-		      <img src="img/defaultimg.png">
-		      <dl>
-		        <dt>Cinéma</dt>
-		        <dd>
-		          <span>Distance</span>
-		        </dd>
-		      </dl>
-		    </li>
-		    <li>
-		      <img src="img/defaultimg.png">
-		      <dl>
-		        <dt>Cinéma</dt>
-		        <dd>
-		          <span>Distance</span>
-		        </dd>
-		      </dl>
-		    </li>
-		    <li>
-		      <img src="img/defaultimg.png">
-		      <dl>
-		        <dt>Cinéma</dt>
-		        <dd>
-		          <span>Distance</span>
-		        </dd>
-		      </dl>
-		    </li>
-		    <li>
-		      <img src="img/defaultimg.png">
-		      <dl>
-		        <dt>Cinéma</dt>
-		        <dd>
-		          <span>Distance</span>
-		        </dd>
-		      </dl>
-		    </li>
-		    <li>
-		      <img src="img/defaultimg.png">
-		      <dl>
-		        <dt>Cinéma</dt>
-		        <dd>
-		          <span>Distance</span>
-		        </dd>
-		      </dl>
-		    </li>
 		  </ul>
 		</section>
 
@@ -190,63 +140,27 @@
 		<section role="region" id="movies">
 		      <h2 class="bb-docs">Séances et films</h2>
 		      <ul>
-		         <li>
-		            <img src="img/defaultimg.png">
-		            <dl>
-		              <dt>Super Film</dt>
-		              <dd>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		              </dd>
-		            </dl>
-		          </li>
-		          <li>
-		            <img src="img/defaultimg.png">
-		            <dl>
-		              <dt>Super Film</dt>
-		              <dd>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		              </dd>
-		            </dl>
-		          </li>
-		          <li>
-		            <img src="img/defaultimg.png">
-		            <dl>
-		              <dt>Super Film</dt>
-		              <dd>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		              </dd>
-		            </dl>
-		          </li>
-		          <li>
-		            <img src="img/defaultimg.png">
-		            <dl>
-		              <dt>Super Film</dt>
-		              <dd>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		                <time>5:43PM</time>
-		              </dd>
-		            </dl>
-		          </li>
 		      </ul>
 		</section>
 
+		<section role="region" id="about">
+		      <h2 class="bb-docs">À propos</h2>
+		      <p>Développé durant la FirefoxOS App Days à Paris le 26 Janvier 2013 par :</p>
+		      <p> &#9656; Malik Baba Aïssa</p>
+		      <p> &#9656; @rthur</p>
+		      <h2 class="bb-docs">Remerciements</h2>
+		      <p>Merci à la team FirefoxOS :)</p>
 
-	    </div>
-	  </section>
+		</section>
 
+
+
+    </div>
+  </section>
+
+  <script src='js/jquery.js'></script>
+  <script src='js/main.js'></script>
+<script src='js/map.js'></script>
 
 </body>
 </html>
