@@ -43,7 +43,8 @@ nav .inner ul li a label {
   color: #F7F3F3;
 }
 #movies,
-#theaters,
-#about {
+#about,
+#map {
   display: none;
+  overflow-y: scroll;
 }
