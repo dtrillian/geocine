@@ -42,6 +42,7 @@ nav .inner ul li a label {
   text-shadow: 1px -1px 1px #000000;
   color: #F7F3F3;
 }
-#movies {
-  overflow-y: scroll;
+#movies,
+#theaters {
+  display: none;
 }
