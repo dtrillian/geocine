@@ -10,7 +10,7 @@
 	<link rel='stylesheet' href='css/bootstrap-responsive.css'/>
 	<link rel='stylesheet' href='css/main.css'/>
 
-	<script src='js/jquery.js'></script>
+	<script src='js/lib/jquery.js'></script>
 	<script src='js/bootstrap.js'></script>
 	<script src='js/underscore.js'></script>
 	<script src='js/backbone.js'></script>
@@ -24,7 +24,51 @@
 
 	<section id="mainContent">
 		<a href="#" onClick="toggleMenu();">TOGGLE MENU</a>
+
+		<!-- Use this installation button to install locally without going
+	         through the marketpace (see app.js) -->
+	    <!-- <button id="install-btn">Install</button>     -->
+
+	    <div class="loading">Loading...</div>
+	    
+	    <x-view id="app">
+			<x-listview class="list">
+				<header>
+					<button class="refresh">Refresh</button>
+						<h1>My Items</h1>
+					<button class="add">+</button>
+				</header>
+			</x-listview>
+
+		    <x-view class="detail">
+				<header>
+				<h1>he</h1>
+				<button data-view="x-view.edit">Edit</button>
+				</header>
+		        
+		        <h1 class="title"></h1>
+		        <p class="desc"></p>
+		        <p class="date"></p>
+		    </x-view>
+
+			<x-view class="edit">
+				<header><h1>Edit</h1></header>
+				<div class="field">Title: <input type="text" name="title" /></div>
+				<div class="field">Description: <input type="text" name="desc" /></div>
+				<button type="submit" class="add">Add</button>
+			</x-view>
+	    </x-view>
+
 	</section>
+
+	<!-- Using require.js, a module system for javascript, include the
+         js files. This loads "main.js", which in turn can load other
+         files, all handled by require.js:
+         http://requirejs.org/docs/api.html#jsfiles -->
+    <script type="text/javascript" src="js/lib/x-tag.js"></script>
+    <script type="text/javascript"
+            data-main="js/init.js"
+            src="js/lib/require.js"></script>
 
 </body>
 </html>
