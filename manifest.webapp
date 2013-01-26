@@ -1,0 +1,13 @@
+{
+  "name": "GéoCiné",
+  "description": "Trouvez les cinémas proches de vous et découvrez les films à l'affiche et l'horaires des séances !",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/geocine-logo.png"
+  },
+  "developer": {
+    "name": "Malik & @rthur",
+    "url": "http://www.perdu.com"
+  },
+  "default_locale": "fr"
+}
