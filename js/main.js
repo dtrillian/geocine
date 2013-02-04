@@ -235,4 +235,74 @@ if(navigator.geolocation){
 	getSalles_list(latitude,longitude);
 }
 
+/*=====================================================*/
+/*               BACKBONE MODIFICATION                 */
+/*=====================================================*/
+
+window.Theater = Backbone.Model.extend({
+    defaults : {
+        id : "",
+        code : "",
+        distance : ,
+        name : "",
+        address : "",
+        postalCode : "",
+        city : "",
+        cinemaChain : "",
+        screenCount : "",
+        latitude : "",
+        longitude : "",
+        pictureUrl : ""
+    },
+    
+    initialize : function Event() {
+        console.log('Theater Constructor');
+    },
+    
+    urlRoot:'http://localhost:2403/event',
+    
+    url: function() {
+        var base = this.urlRoot || (this.collection && this.collection.url) || "/";
+        if (this.isNew()) return base;
+ 
+        return base + "/" + encodeURIComponent(this.id);
+    },
+
+    getId : function() {
+        return this.get('id');
+    },
+    getCode : function() {
+        return this.get ('code');
+    },
+    getDistance : function() {
+        return this.get('distance');    
+    },
+    getName : function() {
+        return this.get('name');    
+    },
+    getAddress : function() {
+        return this.get('address');    
+    },
+    getPostalCode : function() {
+        return this.get('postalCode');
+    },
+    getCity : function() {
+        return this.get('city');
+    },
+    getCinemaChain : function() {
+        return this.get('cinemaChain');
+    },
+    getScreenCount : function() {
+        return this.get('screenCount');
+    },
+    getLatitude : function() {
+        return this.get('latitude');
+    },
+    getLongitude : function() {
+        return this.get('longitude');
+    },
+    getPictureUrl : function() {
+        return this.get('pictureUrl');
+    }
+});
 
