@@ -124,7 +124,7 @@ function getSallesListCallback(data) {
                       </dl>\
                     </li>"
                 );
-                console.log("PROUT" + salle.name);
+                console.log("SALLE = " + salle.name);
             }
 
             i++;
@@ -151,7 +151,7 @@ function getFilmsCallback(data) {
                       </dl>\
                     </li>"
                 );
-                console.log("PROUT" + film.title);
+                console.log("FILM = " + film.title);
             }
 
             i++;
@@ -243,7 +243,7 @@ window.Theater = Backbone.Model.extend({
     defaults : {
         id : "",
         code : "",
-        distance : ,
+        distance : "",
         name : "",
         address : "",
         postalCode : "",
@@ -304,5 +304,15 @@ window.Theater = Backbone.Model.extend({
     getPictureUrl : function() {
         return this.get('pictureUrl');
     }
+});
+
+window.Theaters = Backbone.Collection.extend({
+    initialize : function() {
+        console.log('Theaters collection initializer');
+    },
+
+    model:Theater,
+    
+    url:'http://localhost:2403/event'
 });
 
