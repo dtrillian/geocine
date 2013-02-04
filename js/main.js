@@ -169,7 +169,7 @@ function getFilmsCallback(data) {
 function getSallesCallback(data) {
 	//alert(data.feed.totalResults);
 	var i=1;
-	for each(salle in data. feed.theater) {
+	for each(salle in data.feed.theater) {
 		//alert("> "+salle.name);
 		var myMarkerLatLng = new CM.LatLng(salle.geoloc.lat,salle.geoloc.long);
 		var myMarker = new CM.Marker(myMarkerLatLng, { title: salle.name , icon:pincinema_icon});
