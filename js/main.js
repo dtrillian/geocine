@@ -312,6 +312,92 @@ window.Theaters = Backbone.Collection.extend({
     },
 
     model:Theater,
+
+    url:'http://localhost:2403/event'
+});
+
+window.Movie = Backbone.Model.extend({
+    defaults : {
+        id : "",
+        movieType : "",
+        originalTitle : "",
+        title : "",
+        productionYear : "",
+        nationality : "",
+        genre : "",
+        release : "",
+        formatList : "",
+        languageList : "",
+        synopsisShort : "",
+        directors : "",
+        actors : "",
+        certificate : "",
+        posterUrl : ""
+    },
+    
+    initialize : function Event() {
+        console.log('Movie Constructor');
+    },
+    
+    urlRoot:'http://localhost:2403/event',
+    
+    url: function() {
+        var base = this.urlRoot || (this.collection && this.collection.url) || "/";
+        if (this.isNew()) return base;
+ 
+        return base + "/" + encodeURIComponent(this.id);
+    },
+
+    getId : function() {
+        return this.get('id');
+    },
+    getOriginalTitle : function() {
+        return this.get ('originalTitle');
+    },
+    getTitle : function() {
+        return this.get ('title');
+    },
+    getProductionYear : function() {
+        return this.get ('productionYear');
+    },
+    getNationality : function() {
+        return this.get ('nationality');
+    },
+    getGenre : function() {
+        return this.get ('genre');
+    },
+    getRelease : function() {
+        return this.get ('release');
+    },
+    getFormatList : function() {
+        return this.get ('formatList');
+    },
+    getLanguageList : function() {
+        return this.get ('languageList');
+    },
+    getSynopsisShort : function() {
+        return this.get ('synopsisShort');
+    },
+    getDirectors : function() {
+        return this.get('directors');
+    },
+    getActors : function() {
+        return this.get('actors');
+    },
+    getCertificate : function() {
+        return this.get('certificate');
+    },
+    getPosterUrl : function() {
+        return this.get('posterUrl');
+    }   
+});
+
+window.Movies = Backbone.Collection.extend({
+    initialize : function() {
+        console.log('Movies collection initializer');
+    },
+
+    model:Movie,
     
     url:'http://localhost:2403/event'
 });
