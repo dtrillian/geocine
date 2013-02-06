@@ -236,8 +236,11 @@ if(navigator.geolocation){
 }
 
 /*=====================================================*/
-/*               BACKBONE MODIFICATION                 */
+/*                   BACKBONE GEOCINE                  */
 /*=====================================================*/
+
+Backbone.emulateHTTP = true; // Use _method parameter rather than using DELETE and PUT methods
+Backbone.emulateJSON = true; // Send data to server via parameter rather than via request content
 
 window.Theater = Backbone.Model.extend({
     defaults : {
@@ -259,50 +262,13 @@ window.Theater = Backbone.Model.extend({
         console.log('Theater Constructor');
     },
     
-    urlRoot:'http://localhost:2403/event',
-    
+    urlRoot:'http://api.allocine.fr/rest/v3/theaterlist?partner=YW5kcm9pZC12M3M',
+
     url: function() {
         var base = this.urlRoot || (this.collection && this.collection.url) || "/";
         if (this.isNew()) return base;
  
-        return base + "/" + encodeURIComponent(this.id);
-    },
-
-    getId : function() {
-        return this.get('id');
-    },
-    getCode : function() {
-        return this.get ('code');
-    },
-    getDistance : function() {
-        return this.get('distance');    
-    },
-    getName : function() {
-        return this.get('name');    
-    },
-    getAddress : function() {
-        return this.get('address');    
-    },
-    getPostalCode : function() {
-        return this.get('postalCode');
-    },
-    getCity : function() {
-        return this.get('city');
-    },
-    getCinemaChain : function() {
-        return this.get('cinemaChain');
-    },
-    getScreenCount : function() {
-        return this.get('screenCount');
-    },
-    getLatitude : function() {
-        return this.get('latitude');
-    },
-    getLongitude : function() {
-        return this.get('longitude');
-    },
-    getPictureUrl : function() {
-        return this.get('pictureUrl');
+        return base + "&lat=" + encodeURIComponent(latitude) + "&long=" + encodeURIComponent(longitude);
     }
 });
 
@@ -339,57 +305,14 @@ window.Movie = Backbone.Model.extend({
         console.log('Movie Constructor');
     },
     
-    urlRoot:'http://localhost:2403/event',
+    urlRoot:'http://api.allocine.fr/rest/v3/movielist?partner=YW5kcm9pZC12M3M',
     
     url: function() {
         var base = this.urlRoot || (this.collection && this.collection.url) || "/";
         if (this.isNew()) return base;
  
         return base + "/" + encodeURIComponent(this.id);
-    },
-
-    getId : function() {
-        return this.get('id');
-    },
-    getOriginalTitle : function() {
-        return this.get ('originalTitle');
-    },
-    getTitle : function() {
-        return this.get ('title');
-    },
-    getProductionYear : function() {
-        return this.get ('productionYear');
-    },
-    getNationality : function() {
-        return this.get ('nationality');
-    },
-    getGenre : function() {
-        return this.get ('genre');
-    },
-    getRelease : function() {
-        return this.get ('release');
-    },
-    getFormatList : function() {
-        return this.get ('formatList');
-    },
-    getLanguageList : function() {
-        return this.get ('languageList');
-    },
-    getSynopsisShort : function() {
-        return this.get ('synopsisShort');
-    },
-    getDirectors : function() {
-        return this.get('directors');
-    },
-    getActors : function() {
-        return this.get('actors');
-    },
-    getCertificate : function() {
-        return this.get('certificate');
-    },
-    getPosterUrl : function() {
-        return this.get('posterUrl');
-    }   
+    }  
 });
 
 window.Movies = Backbone.Collection.extend({
